@@ -1,0 +1,197 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.container1 {
+    position: relative;
+}
+
+.img-fluid1 {
+    width: auto;
+    height: 50vh;
+}
+
+.container1 .card1 .img1 {
+    position: absolute;
+    height: 50vh;
+    top: 50%;
+    transform: translateY(-60%);
+    Z-index: 10000;
+    width: 100%
+}
+
+.container1 .card1:hover .img1 {
+    top: 0%;
+    transform: translateY(-15%);
+    transition: 0.5s all ease-in-out;
+}
+
+.container1.card1 .img1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 250px;
+}
+
+.container1 .card1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background-color: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container1 .card1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(36, 36, 238);
+    clip-path: circle(140px at 30% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container1 .card1:hover:before {
+    clip-path: circle(300px at 30% -20%);
+}
+
+.container1 .card1::after {
+    content: 'RAVI';
+    position: absolute;
+    top: 35%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.06);
+}
+
+.container1 .card1 .contextbx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.container1 .card1:hover .contextbx {
+    height: 210px;
+}
+
+.container1 .card1 .contextbx h2 {
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(248, 244, 244);
+    padding-bottom: 2px;
+}
+
+.container1 .card1 .contextbx .size, .container1 .card1 .contextbx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container1 .card1:hover .contextbx .size {
+    opacity: 2;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container1 .card1:hover .contextbx .color {
+    opacity: 2;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.container1 .card1 .contextbx .size h3, .container1 .card1 .contextbx .color h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.container1 .card1 .contextbx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    letter-spacing: 5px;
+    display: inline-block;
+    color: #111;
+    background: linear-gradient(to top right, rgb(156, 150, 150), white);
+    border-radius: 14px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.container1 .card1 .contextbx .size span:hover {
+    background: rgb(36, 36, 238);
+    transition: 0.8s ease-out;
+}
+
+.container1 .card1 .contextbx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.container1 .card1 .contextbx .color span:nth-child(2) {
+    background: #9bdc28;
+}
+
+.container1 .card1 .contextbx .color span:nth-child(3) {
+    background: #03a9f4;
+}
+
+.container1 .card1 .contextbx .color span:nth-child(4) {
+    background: #e91e63;
+}
+
+.container1 .card1 .contextbx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s;
+}
+
+.container1 .card1:hover .contextbx a {
+    opacity: 2;
+    transform: translateY(0px);
+    transition-delay: 0.8s;
+}
