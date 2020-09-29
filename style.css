@@ -33,7 +33,7 @@ body {
 
 .container1 .card1:hover .img1 {
     top: 0%;
-    transform: translateY(-15%);
+    transform: translateY(-35%);
     transition: 0.5s all ease-in-out;
 }
 
